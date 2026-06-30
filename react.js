@@ -20,10 +20,10 @@ app.use(async (req, res) => {
           padding:14px;
           font-size:14px;
           color:#cfcfcf;
-          background:#f7f3ee;
+          background:#141414;
           border-top:1px solid rgba(255,255,255,0.08);
         ">
-          Powered by <strong style="color:#67919F;">KAALVION</strong>
+          Powered by <strong style="color:#d67523;">KAALVION</strong>
         </div>
       `;
       html = html.includes('</body>')
