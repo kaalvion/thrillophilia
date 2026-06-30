@@ -2,7 +2,7 @@ const express = require('express');
 const fetch = require('node-fetch'); // or global fetch if Node 18+
 const app = express();
 
-const TARGET = 'https://www.thrillophilia.com/';
+const TARGET = 'https://www.thrillophilia.com';
 
 app.use(async (req, res) => {
   const targetUrl = TARGET + req.url;
