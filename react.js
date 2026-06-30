@@ -2,7 +2,7 @@ const express = require('express');
 const fetch = require('node-fetch'); // or global fetch if Node 18+
 const app = express();
 
-const TARGET = 'https://www.thrillophilia.com';
+const TARGET = 'https://www.seezen.in';
 
 app.use(async (req, res) => {
   const targetUrl = TARGET + req.url;
@@ -20,16 +20,16 @@ app.use(async (req, res) => {
     if (contentType && contentType.includes('text/html')) {
       let html = await response.text();
 
-      const badge = `
+       const badge = `
         <div style="
           text-align:center;
           padding:14px;
           font-size:14px;
           color:#cfcfcf;
-          background:#141414;
+          background:#f7f3ee;
           border-top:1px solid rgba(255,255,255,0.08);
         ">
-          Powered by <strong style="color:#d67523;">KAALVION</strong>
+          Powered by <strong style="color:#67919F;">KAALVION</strong>
         </div>
       `;
 
@@ -47,4 +47,5 @@ app.use(async (req, res) => {
   }
 });
 
-module.exports = app;
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => console.log(`Server running at http://localhost:${PORT}`));
